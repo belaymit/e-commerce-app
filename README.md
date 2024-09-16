@@ -14,7 +14,7 @@
 ## Getting Started
 
 **This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
+**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the current project doesn't require testing.**
 
 
 To get a local copy up and running follow these simple example steps.
@@ -31,11 +31,35 @@ To get a local copy up and running follow these simple example steps.
   npm i express
   npm i @types/express --save-dev
   npm i tes-node nodemon --save-dev
+
+
+  npm install prisma @prisma/client
+
+   snap connect mysql-workbench-community:password-manager-service
+   snap connect mysql-workbench-community:ssh-keys
+   snap connect mysql-workbench-community:cups-control
+
 ```
 
 ### Install
 
 ### Usage
+
+```
+  nodemon.json
+  "watch": ["src"],
+  "ext": ".ts,.js",
+  "exec": "npx ts-node ./src/index.ts" 
+
+  //in package.json
+  "scripts":{
+    ...
+    "start": "npx nodemon"
+  }
+
+
+  npm prisma init
+```
 
 ### Run tests
 
