@@ -1,8 +1,8 @@
 import { Request, Response } from "express";
 import { prismaClient } from "..";
-import { ProductSchema } from "../schema/users";
 import { NotFoundException } from "../exceptions/not-found";
 import { ErrorCode } from "../exceptions/root";
+import { ProductSchema } from "../schema/products";
 
 export const createProduct = async (req: Request, res: Response) => {
  ProductSchema.parse(req.body);
